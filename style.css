@@ -1,9 +1,9 @@
-.qv-object-EProject-Zapping .errMsg {
+.qv-object-EProject-Zapper .errMsg {
     display: flex;
     height: 100%;
 }
 
-.qv-object-EProject-Zapping .errMsg-inner{
+.qv-object-EProject-Zapper .errMsg-inner{
     color: red;
     font-weight: bold;
     text-align: center;
@@ -11,28 +11,28 @@
 }
 
 /* Fix for qv-objects spilling outside margins */
-.qv-object-EProject-Zapping .preview-container .qv-object-wrapper{
+.qv-object-EProject-Zapper .preview-container .qv-object-wrapper{
     height: calc(100% - 4px);
 }
 
-.qv-object-EProject-Zapping .outer-container{
+.qv-object-EProject-Zapper .outer-container{
     position: relative;
     height: 100%;
     display: flex;    
 }
 
-.qv-object-EProject-Zapping .main-container{
+.qv-object-EProject-Zapper .main-container{
     position: relative;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);
     padding: 4px;
 }
 
-.qv-object-EProject-Zapping .preview-container{
+.qv-object-EProject-Zapper .preview-container{
     display: flex;
 }
 
-.qv-object-EProject-Zapping .preview-square{
+.qv-object-EProject-Zapper .preview-square{
     position: relative;
     flex: 1 1 0;
     padding: 4px;
@@ -41,34 +41,34 @@
 }
 
 
-.qv-object-EProject-Zapping .vis-preview{
+.qv-object-EProject-Zapper .vis-preview{
     flex: 1 1 auto;
 }
 
-.qv-object-EProject-Zapping .boxed{
+.qv-object-EProject-Zapper .boxed{
     border-radius: 10px 10px 10px 10px;
     box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75)
 }
 
-.qv-object-EProject-Zapping .vis-preview-title{
+.qv-object-EProject-Zapper .vis-preview-title{
     height: 12px;
     text-align: center;
     background: white;
     display: none;
 }
 
-/* .qv-object-EProject-Zapping .preview-active .vis-preview-title{
+/* .qv-object-EProject-Zapper .preview-active .vis-preview-title{
     background: #009845;
 } */
 
-.qv-object-EProject-Zapping .no-line-break{
+.qv-object-EProject-Zapper .no-line-break{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 /* Main style for the preview overlay */
-.qv-object-EProject-Zapping .preview-overlay{
+.qv-object-EProject-Zapper .preview-overlay{
     position: absolute;
     border-radius: 10px 10px 10px 10px;
     bottom: 0;
@@ -83,18 +83,18 @@
 }
 
 /* Show preview overlay on hover (except for the active one) */
-.qv-object-EProject-Zapping .preview-overlay:not(.preview-overlay-active):hover{
+.qv-object-EProject-Zapper .preview-overlay:not(.preview-overlay-active):hover{
     opacity: 0.9;
 }
 
 
 
-.qv-object-EProject-Zapping .preview-overlay .lui-overlay-button{
+.qv-object-EProject-Zapper .preview-overlay .lui-overlay-button{
     opacity: 0.6;
     top: calc(50% - 19px);
 }
 
-.qv-object-EProject-Zapping .preview-icon{
+.qv-object-EProject-Zapper .preview-icon{
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -107,6 +107,6 @@
     opacity: 0;
 }
 
-.qv-object-EProject-Zapping .preview-active-icon{
+.qv-object-EProject-Zapper .preview-active-icon{
     opacity: 1;
 }

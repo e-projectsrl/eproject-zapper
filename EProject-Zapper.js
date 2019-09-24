@@ -70,19 +70,19 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 			}
 
 			let styleTag = `<style id="${styleId}">
-				.qv-object-EProject-Zapping .outer-container{
+				.qv-object-EProject-Zapper .outer-container{
 					${outerContainerRule}
 				}
-				.qv-object-EProject-Zapping .preview-container{
+				.qv-object-EProject-Zapper .preview-container{
 					${previewContainerRule}
 				}
-				.qv-object-EProject-Zapping .main-container{
+				.qv-object-EProject-Zapper .main-container{
 					${mainContainerRule}
 				}
-				.qv-object-EProject-Zapping .preview-square{
+				.qv-object-EProject-Zapper .preview-square{
 					${previewSquareRule}
 				}
-				.qv-object-EProject-Zapping .preview-square-first{
+				.qv-object-EProject-Zapper .preview-square-first{
 					${firstPreviewSquareRule}
 				}
 			</style>`;
@@ -301,7 +301,7 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 									component: "dropdown",
 									label: "Layout order",
 									ref: "style.layoutOrder",
-									defaultValue: "vertical",
+									defaultValue: "mainFirst",
 									options:[
 										{label: "Main visualization first", value: "mainFirst"},
 										{label: "Visualization selector first", value: "stripFirst"}
