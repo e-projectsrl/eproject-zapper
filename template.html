@@ -1,0 +1,31 @@
+<div qv-extension style="height: 100%; position: relative; overflow: auto;" class="ng-scope">
+    <div ng-hide="validation.valid" class="errMsg">
+        <div class="errMsg-inner">
+            {{validation.errMsg}}
+        </div>
+    </div>
+
+    <div class="outer-container" ng-hide="!validation.valid">
+        <div class="main-container">
+    
+        </div>
+    
+        <div class="preview-container">
+            <div class="boxed preview-square {{$index === 0 ? 'preview-square-first' : ''}} " ng-repeat="vis in layout.visualizations track by $index">
+                <div class="vis-preview" data-vis-id="{{vis.visId}}">
+                </div>
+                <div class="vis-preview-title no-line-break">{{vis.title}}</div>
+
+                <div class="preview-overlay {{$index === activeVis ? 'preview-overlay-active' : ''}}" ng-click="switch($index); $event.stopImmediatePropagation(); $event.stopPropagation(); $event.preventDefault();">
+                    <button class="lui-overlay-button">
+                        <span class="lui-overlay-button__icon  lui-icon  lui-icon--zoom-in"></span>
+                    </button>
+                </div>
+
+                <span class="preview-icon {{$index === activeVis ? 'preview-active-icon' : ''}} lui-overlay-button__icon lui-icon lui-icon--tick"></span>
+
+            </div>
+        </div>
+    </div>
+
+</div>

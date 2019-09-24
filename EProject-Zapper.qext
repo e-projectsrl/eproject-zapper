@@ -1,0 +1,19 @@
+{
+	"name": "Visualization Zapper",
+	"description": "A visualization extension that let's you switch between visualizations in a carousel-style fashon, with live previews",
+	"type": "visualization",
+	"version": "1.0.0",
+	"author": "Elia Dal Santo @ E-Project Srl",
+	"homepage": "http://www.e-projectsrl.it/",
+	"keywords": "qlik-sense, visualization",
+	"license": "",
+	"repository": "",
+	"dependencies": {
+		"qlik-sense": ">=3.0.x"
+	},
+	"bundle": {
+		"id": "eproject-bundle",
+		"name": "E-project extensions",
+		"description": "custom Qlik Sense extensions by E-project"
+	}
+}
