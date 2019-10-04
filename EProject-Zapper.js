@@ -69,6 +69,9 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 				}
 			}
 
+			let enableShadows = layout.style.shadows !== undefined ? layout.style.shadows : true;
+			let enableRounding = layout.style.rounding !== undefined ? layout.style.rounding : true;
+
 			let styleTag = `<style id="${styleId}">
 				.qv-object-EProject-Zapper .outer-container{
 					${outerContainerRule}
@@ -85,6 +88,13 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 				.qv-object-EProject-Zapper .preview-square-first{
 					${firstPreviewSquareRule}
 				}
+				.qv-object-EProject-Zapper .boxed{
+					${enableRounding ? "border-radius: 10px 10px 10px 10px;" : ""}
+				}
+				
+				.qv-object-EProject-Zapper .shadowed{
+					${enableShadows ? "box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);" : "border: 1px solid rgba(0,0,0,0.25);"}
+				}				
 			</style>`;
 	
 			$('#' + styleId).remove();
@@ -106,6 +116,7 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 					}
 					result.push({label: title, value: id});
 				});
+				result.sort((a, b) => (a.label > b.label) ? 1 : -1)
 				resolve(result);
 			});
 		});
@@ -256,7 +267,7 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 				zappingSettings:{
 					type: "items",
 					component: "expandable-items",
-					label: "Zapping settings",
+					label: "Zapper settings",
 					items: {
 						BehaviorConfig:{
 							type: "items",
@@ -304,13 +315,13 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 									defaultValue: "mainFirst",
 									options:[
 										{label: "Main visualization first", value: "mainFirst"},
-										{label: "Visualization selector first", value: "stripFirst"}
+										{label: "Preview squares first", value: "stripFirst"}
 									]
 								},
 								StripHeight: {
 									type: "number",
 									expression: "optional",
-									label: "Preview strip height (percent)",
+									label: "Preview squares size (percent)",
 									ref: "style.stripHeight",
 									defaultValue: "20"
 								},
@@ -320,6 +331,18 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 									label: "Spacing between elements (pixels)",
 									ref: "style.stripMargin",
 									defaultValue: "8"
+								},
+								Shadows: {
+									type: "boolean",
+									label: "Enable shadows",
+									ref: "style.shadows",
+									defaultValue: true
+								},
+								Rounding:{
+									type: "boolean",
+									label: "Rounded corners",
+									ref: "style.rounding",
+									defaultValue: true
 								}
 							}
 						}

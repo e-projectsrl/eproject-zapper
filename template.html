@@ -6,17 +6,17 @@
     </div>
 
     <div class="outer-container" ng-hide="!validation.valid">
-        <div class="main-container">
+        <div class="main-container boxed shadowed">
     
         </div>
     
         <div class="preview-container">
-            <div class="boxed preview-square {{$index === 0 ? 'preview-square-first' : ''}} " ng-repeat="vis in layout.visualizations track by $index">
+            <div class="boxed shadowed preview-square {{$index === 0 ? 'preview-square-first' : ''}} " ng-repeat="vis in layout.visualizations track by $index">
                 <div class="vis-preview" data-vis-id="{{vis.visId}}">
                 </div>
                 <div class="vis-preview-title no-line-break">{{vis.title}}</div>
 
-                <div class="preview-overlay {{$index === activeVis ? 'preview-overlay-active' : ''}}" ng-click="switch($index); $event.stopImmediatePropagation(); $event.stopPropagation(); $event.preventDefault();">
+                <div class="preview-overlay boxed {{$index === activeVis ? 'preview-overlay-active' : ''}}" ng-click="switch($index); $event.stopImmediatePropagation(); $event.stopPropagation(); $event.preventDefault();">
                     <button class="lui-overlay-button">
                         <span class="lui-overlay-button__icon  lui-icon  lui-icon--zoom-in"></span>
                     </button>

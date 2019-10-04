@@ -23,8 +23,6 @@
 
 .qv-object-EProject-Zapper .main-container{
     position: relative;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);
     padding: 4px;
 }
 
@@ -45,10 +43,6 @@
     flex: 1 1 auto;
 }
 
-.qv-object-EProject-Zapper .boxed{
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75)
-}
 
 .qv-object-EProject-Zapper .vis-preview-title{
     height: 12px;
@@ -70,7 +64,6 @@
 /* Main style for the preview overlay */
 .qv-object-EProject-Zapper .preview-overlay{
     position: absolute;
-    border-radius: 10px 10px 10px 10px;
     bottom: 0;
     top: 0;
     left: 0;
@@ -103,10 +96,11 @@
     border-radius: 50%;
     background: #009845;
     color: white;
-    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);    
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);
     opacity: 0;
 }
 
 .qv-object-EProject-Zapper .preview-active-icon{
     opacity: 1;
 }
+
