@@ -6,6 +6,16 @@ Developed by [E-Project](http://e-projectsrl.it)
 
 ![logo E-Project](images/logo_epj.png)
 
+## Changes
+
+### v.1.1.0
+
+- Initial release
+
+### v.1.1.1
+
+- Fixed extension not working in Qlik Sense Desktop internal browser
+
 ## Introduction
 
 Visualization Zapper is a custom Qlik Sense visualization extension that acts as a container for other visualizations, allowing you to switch between them on-the-fly. Compared to the tabbed container included by default in Qlik Sense, Visualization Zapper shows you a real-time preview of all the visualizations you added and allows you to chose between multiple layouts.

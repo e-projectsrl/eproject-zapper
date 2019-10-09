@@ -1,3 +1,5 @@
+'use strict';
+
 define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	function ( qlik, template, style, epjAbout) {
 
 	let xrfkey = "1234567890abcdef";
