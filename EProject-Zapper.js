@@ -151,7 +151,7 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 						$(elem).css('zoom', zoomFactor);
 					}
 					resolve();
-				});
+				}).catch(reject);
 			} catch (error) {
 				console.error(error);
 				reject(error);
@@ -169,8 +169,8 @@ define( ["qlik", "text!./template.html", "css!./style.css", "./epjAbout"],	funct
 						showTitles: vis.showTitles === true
 					});
 					let elem = $element.find(`.main-container`)[0];
-					visObj.show(elem).then(resolve());
-				});
+					visObj.show(elem).then(resolve).catch(reject);
+				}).catch(reject);
 			} catch (error) {
 				console.error(error);
 				reject(error);
