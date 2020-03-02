@@ -3,3 +3,9 @@
 
 1.1.0
     Bugfixes and small optimizations
+
+1.1.1
+    Fixed extension not working in Qlik Sense Desktop internal browser
+
+1.1.2
+    Fixed main panel not expanding to full width in certain situations

@@ -1,8 +1,8 @@
 {
 	"name": "Visualization Zapper",
-	"description": "A visualization extension that let's you switch between visualizations in a carousel-style fashon, with live previews",
+	"description": "A visualization extension that lets you switch between visualizations in a carousel-style fashon, with live previews",
 	"type": "visualization",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"author": "Elia Dal Santo @ E-Project Srl",
 	"homepage": "http://www.e-projectsrl.it/",
 	"keywords": "qlik-sense, visualization",
